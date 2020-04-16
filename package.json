@@ -7,16 +7,19 @@
     "css",
     "postcss-plugin",
     "accessibility",
-    "a11y"
+    "a11y",
+    "colorblind",
+    "color-blind"
   ],
   "scripts": {
     "test": "jest && eslint ."
   },
   "author": "Lisa Lu <lisalu729@gmail.com>",
   "license": "MIT",
-  "repository": "tinglu/postcss-color-blind-converter",
+  "repository": "https://github.com/tinglu/postcss-color-blind-converter.git",
   "dependencies": {
-    "postcss": "^7.0.18"
+    "postcss": "^7.0.18",
+    "color-blind": "^0.1.1"
   },
   "devDependencies": {
     "@logux/eslint-config": "^33.0.0",

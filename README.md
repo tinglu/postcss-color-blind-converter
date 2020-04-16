@@ -16,6 +16,23 @@
 }
 ```
 
+
+## Color Blindness Table
+
+| Group                                                           |                                       |                                      |                                   |
+| --------------------------------------------------------------- | ------------------------------------- | ------------------------------------ | --------------------------------- |
+| **Trichromat** (三色视者,正常色觉者) <br/>*3 good cones*        | Normal                                |                                      |                                   |
+| **Anomalous Trichromat** (异常三色觉)<br/>*2 good cones, 1 bad* | Protanomaly 红色弱<br/>*low red*      | Deuteranomaly 绿色弱<br/>*low green* | Tritanomaly 蓝色弱<br/>*low blue* |
+| **Dichromat** (二色视者)<br/>*2 good cones, 1 blind*            | Protanopia 红色盲<br/>*no red*        | Deuteranopia 绿色盲<br/>*no green*   | Tritanopia 蓝色盲<br/>*no blue*   |
+| **Monochromat** (全色盲者) <br/>*1 good cone, 2 blind/bad*      | Achromatomaly <br />*almost no color* | Achromatopsia 全色盲<br/>*no color*  |                                   |
+
+
+## Development
+
+- Install: `$npm install`
+- Run: `$npm run`
+- Test: `$ npm test`
+
 ## Usage
 
 Check you project for existed PostCSS config: `postcss.config.js`

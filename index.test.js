@@ -1,4 +1,5 @@
 let postcss = require('postcss')
+let colorblindPlugin = require('color-blind')
 
 let plugin = require('./')
 
@@ -9,6 +10,20 @@ async function run (input, output, opts) {
 }
 
 /* Write tests here */
-it('does something', async () => {
-  await run('a{ }', 'a{ }', {})
+describe('css converter test', () => {
+  it('should return same css if no colors found', async () => {
+    await run('h1 {color: beige;}', 'h1 {color: red;}', {})
+  })
+
+  it('should convert css if colors found', async () => {
+    await run('h1 {color: beige;}', 'h1 {color: red;}', {})
+  })
+})
+
+describe('color-blind plugin functions', () => {
+  it('protanopia', () => {
+    let result = colorblindPlugin.protanopia('#42dead')
+    console.log(result)
+    expect(result).toEqual('#d1c4a0')
+  })
 })
