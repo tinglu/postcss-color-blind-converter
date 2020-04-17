@@ -1,20 +1,35 @@
 # PostCSS Color Blind Converter
 
-[PostCSS] plugin that converts CSS for easier reading for color-blind people..
+[PostCSS] plugin that converts CSS colors for different types of color-blindness.
 
 [PostCSS]: https://github.com/postcss/postcss
 
 ```css
 .foo {
     /* Input example */
+    color: beige;
+    background-color: #FF6F61;
 }
 ```
 
 ```css
 .foo {
-  /* Output example */
+  /* Output example - for Tritanopia */
+  color: #faf0ff;
+  background-color: #ff6d74;
 }
 ```
+
+## Take-aways
+
+The two main take-aways I get from working on this practice are:
+
+1. How to build a PostCSS plugin. Documentations followed:
+    - [Writing a PostCSS Plugin from PostCSS](https://github.com/postcss/postcss/blob/master/docs/writing-a-plugin.md)
+    - Especially these two tutorials: [Writing Your First PostCSS Plugin](https://dockyard.com/blog/2018/02/01/writing-your-first-postcss-plugin) & [PostCSS Deep Dive: Create Your Own Plugin](https://webdesign.tutsplus.com/tutorials/postcss-deep-dive-create-your-own-plugin--cms-24605)
+2. How colors are transformed for different types of color-blindness:
+    - A more matured PostCSS plugin [btholt/postcss-colorblind](https://github.com/btholt/postcss-colorblind)
+    - Which depends on this library [skratchdot/color-blind](https://github.com/skratchdot/color-blind) which simulates color blindness by converting RGB hex codes. This is also one of the dependencies of this project.
 
 
 ## Color Blindness Table
