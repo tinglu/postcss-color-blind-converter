@@ -10,7 +10,7 @@ module.exports = postcss.plugin('postcss-color-blind-converter', opts => {
   let method = opts.method ? opts.method.toLowerCase().trim() : 'achromatopsia'
   return root => {
     root.walkRules(rule => {
-      rule.walkDecls(/^color-?/, decl => {
+      rule.walkDecls(/^(background|color)-?/, decl => {
         decl.value = transformColor(decl.value, method)
       })
     })
