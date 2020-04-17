@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Postcss Color-Blind Converter Plugin Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" id="current" href="./src/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function changeCSS(cssFile) {
+            var currentCSS = document.getElementById("current")
+            currentCSS.setAttribute("href", cssFile)
+        }
+
+        function normalStyle() {
+            changeCSS('./src/style.css')
+        }
+        function protanomalyStyle() {
+            changeCSS('./dest/style-protanomaly.css')
+        }
+        function protanopiaStyle() {
+            changeCSS('./dest/style-protanopia.css')
+        }
+        function deuteranomalyStyle() {
+            changeCSS('./dest/style-deuteranomaly.css')
+        }
+        function deuteranopiaStyle() {
+            changeCSS('./dest/style-deuteranopia.css')
+        }
+        function tritanomalyStyle() {
+            changeCSS('./dest/style-tritanomaly.css')
+        }
+        function tritanopiaStyle() {
+            changeCSS('./dest/style-tritanopia.css')
+        }
+        function achromatomalyStyle() {
+            changeCSS('./dest/style-achromatomaly.css')
+        }
+        function achromatopsiaStyle() {
+            changeCSS('./dest/style-achromatopsia.css')
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Colors of the Year</h1>
+            <p>
+                By <a href="https://www.pantone.com/color-consulting/about-pantone-color-institute">Pantone Color
+                    Institute</a>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p>
+                    <button type="button" class="btn btn-outline-primary" id="btn-normal"
+                        onclick="normalStyle()">Normal</button>
+
+                    <button type="button" class="btn btn-outline-secondary" id="btn-protanomaly"
+                        onclick="protanomalyStyle()">protanomaly</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-protanopia"
+                        onclick="protanopiaStyle()">protanopia</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-deuteranomaly"
+                        onclick="deuteranomalyStyle()">deuteranomaly</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-deuteranopia"
+                        onclick="deuteranopiaStyle()">deuteranopia</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-tritanomaly"
+                        onclick="tritanomalyStyle()">tritanomaly</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-tritanopia"
+                        onclick="tritanopiaStyle()">tritanopia</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-achromatomaly"
+                        onclick="achromatomalyStyle()">achromatomaly</button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-achromatopsia"
+                        onclick="achromatopsiaStyle()">achromatopsia</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+
+                    <div class="col-sm-12 living-coral-2019">
+                        <h2>2019 - Living Coral</h2>
+                        <p><a href="https://www.w3schools.com/colors/colors_picker.asp?colorhex=FF6F61">HEX: #FF6F61</a>
+                        </p>
+                        <p>PANTONE 16-1546</p>
+                    </div>
+                    <div class="col-sm-12 " style="background-color:#6B5B95">
+                        <h2>2018 - Ultra Violet</h2>
+                        <p><a href="https://www.w3schools.com/colors/colors_picker.asp?colorhex=6B5B95">HEX: #6B5B95</a>
+                        </p>
+                        <p>PANTONE 18-3838</p>
+                    </div>
+
+                    <div class="col-sm-12 " style="background-color:#88B04B">
+                        <h2>2017 Greenery</h2>
+                        <p><a href="https://www.w3schools.com/colors/colors_picker.asp?colorhex=88B04B">Hex #88B04B</a>
+                        </p>
+                        <p>RGB(136, 176, 75)</p>
+                        <p>Pantone 15-0343</p>
+                    </div>
+
+                    <div class="col-sm-12" style="background-color:#F7CAC9">
+                        <h2>2016 Rose Quartz</h2>
+                        <p><a href="https://www.w3schools.com/colors/colors_picker.asp?colorhex=F7CAC9">Hex #F7CAC9</a>
+                        </p>
+                        <p>RGB(247, 202, 201)</p>
+                        <p>Pantone 13-1520</p>
+                    </div>
+
+                    <div class="col-sm-12" style="background-color:#92A8D1">
+                        <h2>2016 Serenity</h2>
+                        <p><a href="https://www.w3schools.com/colors/colors_picker.asp?colorhex=92A8D1">Hex #92A8D1</a>
+                        </p>
+                        <p>RGB(146, 168, 209)</p>
+                        <p>Pantone 15-3919</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
