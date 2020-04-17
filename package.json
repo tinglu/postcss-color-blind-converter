@@ -12,7 +12,7 @@
     "color-blind"
   ],
   "scripts": {
-    "test": "jest && eslint ."
+    "test": "jest ./tests && eslint ."
   },
   "author": "Lisa Lu <lisalu729@gmail.com>",
   "license": "MIT",

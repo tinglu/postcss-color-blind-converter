@@ -19,6 +19,8 @@
 
 ## Color Blindness Table
 
+The table is from [color-blind](https://github.com/skratchdot/color-blind#color-blindness-table) and it's one of the dependencies of this project.
+
 | Group                                                           |                                       |                                      |                                   |
 | --------------------------------------------------------------- | ------------------------------------- | ------------------------------------ | --------------------------------- |
 | **Trichromat** (三色视者,正常色觉者) <br/>*3 good cones*        | Normal                                |                                      |                                   |
@@ -29,9 +31,13 @@
 
 ## Development
 
-- Install: `$npm install`
-- Run: `$npm run`
-- Test: `$ npm test`
+- Install: `$ npm install`
+- Run: `$ npm run`
+- Test:
+  ```bash
+  $ npm test # Jest test cases
+  $ node index.test.js # to test module import
+  ```
 
 ## Usage
 

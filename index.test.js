@@ -1,29 +1,86 @@
+let fs = require('fs')
 let postcss = require('postcss')
-let colorblindPlugin = require('color-blind')
+let colorblindPlugin = require('./') // test my own plugin
 
-let plugin = require('./')
+let css = fs.readFileSync('src/style.css', 'utf8')
 
-async function run (input, output, opts) {
-  let result = await postcss([plugin(opts)]).process(input, { from: undefined })
-  expect(result.css).toEqual(output)
-  expect(result.warnings()).toHaveLength(0)
-}
-
-/* Write tests here */
-describe('css converter test', () => {
-  it('should return same css if no colors found', async () => {
-    await run('h1 {color: beige;}', 'h1 {color: red;}', {})
+postcss([colorblindPlugin({
+    method: 'protanomaly'
+  })])
+  .process(css, {
+    from: undefined
+  })
+  .then(result => {
+    fs.writeFileSync('dest/style-protanomaly.css', result.css)
   })
 
-  it('should convert css if colors found', async () => {
-    await run('h1 {color: beige;}', 'h1 {color: red;}', {})
+postcss([colorblindPlugin({
+    method: 'protanopia'
+  })])
+  .process(css, {
+    from: undefined
   })
-})
+  .then(result => {
+    fs.writeFileSync('dest/style-protanopia.css', result.css)
+  })
 
-describe('color-blind plugin functions', () => {
-  it('protanopia', () => {
-    let result = colorblindPlugin.protanopia('#42dead')
-    console.log(result)
-    expect(result).toEqual('#d1c4a0')
+postcss([colorblindPlugin({
+    method: 'deuteranomaly'
+  })])
+  .process(css, {
+    from: undefined
   })
-})
+  .then(result => {
+    fs.writeFileSync('dest/style-deuteranomaly.css', result.css)
+  })
+
+postcss([colorblindPlugin({
+    method: 'deuteranopia'
+  })])
+  .process(css, {
+    from: undefined
+  })
+  .then(result => {
+    fs.writeFileSync('dest/style-deuteranopia.css', result.css)
+  })
+
+postcss([colorblindPlugin({
+    method: 'tritanomaly'
+  })])
+  .process(css, {
+    from: undefined
+  })
+  .then(result => {
+    fs.writeFileSync('dest/style-tritanomaly.css', result.css)
+  })
+
+
+postcss([colorblindPlugin({
+    method: 'tritanopia'
+  })])
+  .process(css, {
+    from: undefined
+  })
+  .then(result => {
+    fs.writeFileSync('dest/style-tritanopia.css', result.css)
+  })
+
+postcss([colorblindPlugin({
+    method: 'achromatomaly'
+  })])
+  .process(css, {
+    from: undefined
+  })
+  .then(result => {
+    fs.writeFileSync('dest/style-achromatomaly.css', result.css)
+  })
+
+postcss([colorblindPlugin({
+    method: 'achromatopsia'
+  })])
+  .process(css, {
+    from: undefined
+  })
+  .then(result => {
+    fs.writeFileSync('dest/style-achromatopsia.css', result.css)
+  })
